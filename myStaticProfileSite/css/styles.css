@@ -1,0 +1,259 @@
+/* .profile-container {
+    position: relative;
+}
+
+.bground-img {
+    width: 90vw;
+    margin: 1vh 5vw auto 5vw;
+}
+
+.image-container {
+    height: 25vh;
+    overflow: hidden;
+}
+
+.profile-pic {
+    position: absolute;
+    top: 4vh;
+    left: 8vw;
+    height: 50vmin;
+    border-radius: 50%;
+}
+
+.profile {
+    position: absolute;
+    left: 38vw;
+    margin-right: 5vw;
+    font-size: 4vh;
+} */
+
+body {
+    background-color: #def2fd;
+    color: #0f4c75;
+    font-family: "Manrope", sans-serif;
+    font-size: 2.5vh;
+}
+
+h2 {
+    font-family: "Merriweather", sans-serif;
+    font-size: 4vh;
+    margin-top: 10vh;
+}
+
+h3 {
+    font-family: "Merriweather", sans-serif;
+    font-size: 3vh;
+}
+
+p {
+    margin: 0 auto;
+}
+
+.outer-container {
+    background-color: white;
+    margin: 2vh 5vw auto 5vw;
+    padding-bottom: 5vh;
+}
+
+
+/* Responsive design with CSS grid */
+
+
+/* To improve use grid within grid or flex within grid should make it simpler to handle responsiveness and even general alignment of page */
+
+
+/* paragraphs with profile image */
+
+
+/* Refactor move stuff up in the heirarchy if possible */
+
+.title-container {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 3fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-column-gap: 2vw;
+    height: 60vh;
+    background-color: white;
+}
+
+.image-container {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    background-image: url("../static/technology.jpeg");
+    background-size: cover;
+}
+
+.profile-pic-wrapper {
+    grid-row: 2/4;
+    grid-column: 2/3;
+    align-self: center;
+}
+
+.profile-pic {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profile {
+    /* background-color: green; */
+    grid-row: 3/4;
+    grid-column: 3/4;
+    align-self: start;
+    font-size: 3.3vh;
+    padding-right: 10vw;
+}
+
+
+/* CSS flexbox practice */
+
+.content-container {
+    margin-top: 12vh;
+    margin: 5vh 5vw;
+}
+
+.skill-wrapper {
+    display: flex;
+    margin: 5vh auto;
+}
+
+.skill-img {
+    /* width: 180px;
+    height: 120px;
+    object-fit: cover; */
+    /* The object-fit property does not work with the responsive view units. Ask about it. Also check how to fix this. */
+    width: 18vw;
+}
+
+.skill {
+    margin-left: 2vw;
+}
+
+.skill h3 {
+    margin-top: 0;
+}
+
+
+/* Certificates in grid box for wide screen and block for small*/
+
+.certificate-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10vh;
+}
+
+.certificate-img {
+    width: 22vw;
+    border-style: solid;
+    border-color: #0f4c75;
+}
+
+.certificate {
+    text-align: center;
+}
+
+
+/* For small devices */
+
+@media (max-width: 1000px) {
+    body {
+        text-align: center;
+    }
+    h3 {
+        margin-top: 3vh;
+        font-size: 1.2rem;
+    }
+    p,
+    li {
+        font-size: 1.1rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    ul {
+        list-style-type: none;
+    }
+    /* Profile and title section */
+    .title-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 5vmin;
+        height: 100vh;
+    }
+    .image-container {
+        grid-row: 1/2;
+    }
+    .profile-pic-wrapper {
+        grid-row: 1/3;
+        grid-column: 2/3;
+        text-align: center;
+    }
+    .profile {
+        grid-row: 3/4;
+        grid-column: 1/4;
+        justify-self: start;
+        padding-right: 0;
+        font-size: 4vmin;
+        /* background-color: aqua; */
+    }
+    /* Skills section */
+    .content-container {
+        /* text-align: center; */
+        margin-top: auto;
+    }
+    .skill-wrapper {
+        display: block;
+    }
+    /* Certificates section */
+    .certificate-wrapper {
+        display: block;
+    }
+    .certificate-img {
+        text-align: center;
+    }
+}
+
+
+/* Copy pasted button decoration with color adjustments */
+
+.contact-button-wrapper {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.contact-button {
+    background: linear-gradient(to bottom, #759fb6 5%, #15889c 100%);
+    background-color: #759fb6;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 13px 32px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #15889c;
+}
+
+.contact-button:hover {
+    background: linear-gradient(to bottom, #15889c 5%, #759fb6 100%);
+    background-color: #15889c;
+}
+
+.contact-button:active {
+    position: relative;
+    top: 1px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 5vh;
+    padding-bottom: 10vh;
+}
+
+footer a {
+    text-decoration: none;
+    margin: auto 2vw;
+    color: #15889c;
+}

@@ -1,0 +1,15 @@
+.DS_Store
+
+misc/
+
+._.DS_Store
+
+._css
+
+._static
+
+:_index.html
+
+myStaticProfileSite/static/.*
+
+._index.html
