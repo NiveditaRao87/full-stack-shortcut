@@ -1,0 +1,28 @@
+body{
+    background-color: #f7fbe1;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+h1{
+    font-size: 6vw;
+}
+h2{
+    font-size: 4vw;
+    margin-bottom: 10vh;
+}
+.flex-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+.flex-item {
+    width: 25vw;
+    /* display: block; */
+    /* flex-grow: 1; */
+}
+#winner {
+    display: none;
+}
+.image {
+    width: 25vw;
+}
+
